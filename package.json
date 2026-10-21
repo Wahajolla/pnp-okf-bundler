@@ -1,0 +1,12 @@
+{
+  "name": "pnp-okf-bundler",
+  "private": true,
+  "type": "module",
+  "description": "kb: agent-first local knowledge base (OKF bundle + BM25) shipped as agent skills",
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
