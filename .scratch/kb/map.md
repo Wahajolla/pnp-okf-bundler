@@ -33,10 +33,19 @@ A working **v1 of `kb`**: an installable skill package (`npx skills add`) shippi
 - [Staleness and trust lifecycle](issues/10-staleness-trust.md) — trust = date + reading; `deprecated` for superseded entries (×0.5 score, kept for history), `draft` for unconfirmed, `stale_after` only for known shelf life (shown `(stale)`, listed by `reindex`); no `verified` workflow in v1
 - [`/setup-kb` interview and wiring](issues/12-setup-kb-interview.md) — new `kb init` scaffolds/fills the bundle; two questions (commit by default, keep default types); writes a marker-wrapped section to CLAUDE.md and/or AGENTS.md idempotently; no hooks
 - [Build slicing for v1](issues/11-build-slicing.md) — repo layout, node:test unit + CLI tests on fixture bundles, semver `1.0.0`; nine build tickets: spec, frontmatter, bundle core, write commands, search, similar warning, two SKILL.md files, package + e2e
+- [Build: write SPEC.md](issues/13-build-spec.md) — [SPEC.md](../../SPEC.md) consolidates every decision; adds final-`e` stemming
+- [Build: frontmatter reader/writer](issues/14-build-frontmatter.md) — chunked YAML subset; untouched keys round-trip byte-for-byte
+- [Build: bundle core](issues/15-build-bundle-core.md) — discovery, config, slugs, addressing, deterministic indexes, link rewrite/unlink
+- [Build: write commands and CLI shell](issues/16-build-write-commands.md) — init/add/update/delete/types/reindex, `--json`, exit codes, stderr prefixes
+- [Build: search (find)](issues/17-build-search.md) — BM25F as specified; 12/12 fixture ranking queries pass with the spec constants
+- [Build: similar: warning in add](issues/18-build-similar-warning.md) — implemented against bundle and batch
+- [Build: kb SKILL.md](issues/19-build-kb-skill.md) — agent rules, entry guide, stderr table, ingest workflow
+- [Build: setup-kb SKILL.md](issues/20-build-setup-kb-skill.md) — two questions, `kb init`, marker-wrapped CLAUDE.md/AGENTS.md section
+- [Build: package, README and end-to-end check](issues/21-build-package-e2e.md) — public repo, README, MIT; `npx skills add` install and a real headless session save+find verified
 
 ## Not yet specified
 
-_None. The remaining work is build tickets._
+_None. Destination reached: v1 built and verified. Remaining manual check: the interactive `/setup-kb` flow in a live session._
 
 ## Out of scope
 
